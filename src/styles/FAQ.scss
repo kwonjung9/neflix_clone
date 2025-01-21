@@ -7,29 +7,22 @@
   list-style: none;
   font-size: $font-size-medium;
   padding: 10px 0;
-
-  button{
-    text-align: left;
-    display: block;
-    width: 100%;
-    font-size: $font-size-medium;
-    padding: 15px;
-    margin: 10px 0;
-    background-color: #444;
-    color: $text-color;
-    &:hover{
-      // background-color: $hover-color;
-      filter: brightness(0.8);
+    li{
+      margin: 5px;
+      button{
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+        font-size: $font-size-medium;
+        background-color: #444;
+        color: $text-color;
+      }
+      p{
+        font-size: $font-size-medium;
+        padding: 10px;
+        background-color: #444;
+        color: $text-color;
+      }
     }
   }
-  p{
-    display: block;
-    width: 100%;
-    font-size: $font-size-medium;
-    padding: 10px 0;
-    background-color: #444;
-    color: $text-color;
-    padding: 15px;
-    margin: 5px 0;
-  }
-}
