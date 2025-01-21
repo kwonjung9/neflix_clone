@@ -1,0 +1,35 @@
+.faq{
+  @include component_size;
+  color: $text-color;
+}
+.faq-list{
+  text-align: left;
+  list-style: none;
+  font-size: $font-size-medium;
+  padding: 10px 0;
+
+  button{
+    text-align: left;
+    display: block;
+    width: 100%;
+    font-size: $font-size-medium;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #444;
+    color: $text-color;
+    &:hover{
+      // background-color: $hover-color;
+      filter: brightness(0.8);
+    }
+  }
+  p{
+    display: block;
+    width: 100%;
+    font-size: $font-size-medium;
+    padding: 10px 0;
+    background-color: #444;
+    color: $text-color;
+    padding: 15px;
+    margin: 5px 0;
+  }
+}
