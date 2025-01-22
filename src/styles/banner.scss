@@ -1,4 +1,10 @@
 .banner{
+  display: flex;
+  img{
+    width: 100px;
+    height: 100px;
+    margin: 0 20px; 
+  }
   @include component_size;
   padding: 20px;
   transition: 0.5s;
@@ -8,10 +14,11 @@
   }
 }
 .banner-text{
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 20px;
+  padding: 30px;
   background-image: linear-gradient(to right, #14141f, #29294e);
   display: flex;
+  flex: 1;
   justify-content: space-between;
   button{
     @include button-style;

@@ -1,5 +1,5 @@
 header{
-  height: 80vh;
+  height: 88vh;
   background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
                     url('../../public/images/bg.jpg');
   background-position: top center;
@@ -13,10 +13,12 @@ nav{
   @include responsive($breakpoint-medium){
     width: 95%;
   }
-    h1{
-      color: $primary-color;
-      font-size: $font-size-large;
+    a{
+      img{
+        width: 200px;
+        height: 100px;
       }
+    }
     div{
       select{
       padding: 0.4rem 1rem;
@@ -44,6 +46,7 @@ nav{
     transform: translate(-50%, -50%);
     text-align: center;
     height: 720px;
+    width: 100%;
     h2{
       font-size: 64px;
       margin-bottom: 20px;
@@ -58,19 +61,4 @@ nav{
     p{
       font-size: $font-size-small;
     }
-  .email-box{
-    margin-top: 20px;
-    input{
-      font-size: $font-size-medium;
-      padding: 0.5rem 1rem;
-      margin-right: 10px;
-      @include responsive($breakpoint-small){
-        width: 100%;
-      }
-    }
-    button{
-      font-size: $font-size-medium;
-      @include button-style;
-    }
-  }
 }
