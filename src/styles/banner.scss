@@ -1,15 +1,19 @@
 .banner{
   display: flex;
+  cursor: pointer;
   img{
     width: 100px;
     height: 100px;
     margin: 0 20px; 
+    @include responsive($breakpoint-medium){
+      display: none
+    }
   }
   @include component_size;
   padding: 20px;
   transition: 0.5s;
   &:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
     filter: brightness(1.6);
   }
 }
@@ -24,4 +28,5 @@
     @include button-style;
     background-color: #444;
   }
+
 }

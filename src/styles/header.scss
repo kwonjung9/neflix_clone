@@ -1,5 +1,5 @@
 header{
-  height: 88vh;
+  height: 84vh;
   background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
                     url('../../public/images/bg.jpg');
   background-position: top center;
@@ -41,17 +41,17 @@ nav{
 
 .header-content{
   position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    height: 720px;
     width: 100%;
     h2{
       font-size: 64px;
       margin-bottom: 20px;
       @include responsive($breakpoint-medium){
         font-size: 40px;
+        top: 80%;
       }
     }
     h4{

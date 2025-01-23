@@ -26,7 +26,6 @@ const FAQ = () => {
     <div className="faq">
       <h2>자주 묻는 질문</h2>
       <ul className="faq-list">
-        <li>
           {
             FAQList.map((list,idx)=>{
               return <li key={list.id}>
@@ -40,7 +39,6 @@ const FAQ = () => {
               </li>
             })
           }
-        </li>
       </ul>
     </div>
   );
