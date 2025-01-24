@@ -14,7 +14,7 @@ const Login = () => {
   }
   return (
     <div className='login'>
-      <img src='../images/logo.png' onClick={()=>{navigate("/")}}></img>
+      <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt='로그인로고이미지' onClick={()=>{navigate("/")}}></img>
       <div className='login-popup'>
         <p className='close' onClick={()=>{navigate("/")}}>ⓧ</p>
         <h2>로그인</h2>
