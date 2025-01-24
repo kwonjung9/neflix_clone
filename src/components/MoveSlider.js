@@ -8,17 +8,21 @@ import axios from "axios";
 const MoveSlider = () => {
   const [movies, setMovies] = useState([]);
   const [error,setError] = useState(null);
+  const [isLoading, setIsLoding] = useState(true);
   const fetchMovies = async()=>{
     const API_KEY="decc67e8f617c228c9c976bb05cd39ca"
     const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=ko-KR&page=1`
     try{
       const response = await axios.get(url);
       setMovies(response.data.results.slice(0,10));
+      setIsLoding(false);
     }catch(err){
       setError("영화 데이터를 가져오는 중 오류 발생");
+      setIsLoding(false);
     }
   }
   useEffect(()=>{
+    setIsLoding(true);
     fetchMovies();
   },[]);
     const settings = {
@@ -35,21 +39,24 @@ const MoveSlider = () => {
           breakpoint: 1024,
           settings: {
             slidesToShow: 3,
-            slidesToScroll: 3
+            slidesToScroll: 3,
+            initualSilde : 0
+          }
+        },
+        {
+          breakpoint: 960,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initualSilde : 0
           }
         },
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            initualSilde : 0
           }
         }
       ]
@@ -72,6 +79,13 @@ const MoveSlider = () => {
           onClick={onClick}
         >◀</div>
       );
+    }
+
+    if(error){
+      return <div>{error}</div>
+    }
+    if( isLoading ){
+      return <div>Loding......</div>
     }
   return (
     <div className="move-slider">
