@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <a href="#"><img src="../images/logo.png"/></a>
+        <a href="#"><img src="./images/logo.png"/></a>
         <div>
           <select>
             <option>한국어</option>
