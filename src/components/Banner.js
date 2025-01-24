@@ -1,7 +1,7 @@
 const Banner = () => {
   return (
     <section className="banner">
-      <img src="./images/popcorn.png"/> 
+      <img src={`${process.env.PUBLIC_URL}/images/popcorn.png`} alt="배너 이미지"/> 
       <div className="banner-text">           
           <div>
           <p>5,500원이면 만날 수 있는 넷플릭스</p>
