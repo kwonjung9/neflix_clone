@@ -29,9 +29,10 @@
         background-color: #444;
         color: $text-color;
       }
-      p.open{
+      .open{
         height: 150px;
         padding: 10px;
+        opacity: 1;
       }
     }
   }
